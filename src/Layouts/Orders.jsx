@@ -180,7 +180,18 @@ const OrderManagement = () => {
                 <tr key={order.id} className="border-b">
                   <td className="px-6 py-3">{order.id}</td>
                   <td className="px-6 py-3">{order.recipient_name}</td>
-                  <td className="px-6 py-3">{formatDate(order.order_date)}</td>
+                  <td className="px-6 py-3">
+  {new Date(order.order_date).toLocaleString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  })}
+</td>
+
                   <td className="px-6 py-3">{order.status}</td>
                   <td className="px-6 py-3">{order.total}</td>
                   <td className="px-2 py-2 space-x-4 flex items-center">
