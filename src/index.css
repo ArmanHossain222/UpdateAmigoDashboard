@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-bg {
+    padding: 10px 12px;
+    border-radius: 5px;
+    display: block;
+    margin-top: 12px;
+}
+
+.nav-bg:hover {
+    background: gray;
+    transition: all linear .3s;
+}
+
+.nav-bg.active {
+    background: red; /* Change this to the red shade you want */
+    transition: all linear .3s;
+}
